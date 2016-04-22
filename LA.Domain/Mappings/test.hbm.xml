@@ -4,13 +4,19 @@
 
   <class name="test" table="test">
 
-    <id name="id" type="String" unsaved-value="null">
-      <column name="id" sql-type="varchar" not-null="true"/>
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
       <generator class="assigned" />
     </id>
 
     <property name="testField" type="String">
       <column name="testField" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
     </property>
   </class>
 

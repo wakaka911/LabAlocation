@@ -31,6 +31,7 @@ namespace LabAlocation.Controllers
         }
 
         public ActionResult Demo() {
+
             return View();
         }
 

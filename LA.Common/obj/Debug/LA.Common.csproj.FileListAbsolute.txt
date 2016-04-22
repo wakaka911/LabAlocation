@@ -1,6 +1,7 @@
 F:\graddesign\labAlocation\LabAlocation\LA.Common\bin\Debug\LA.Common.dll.config
 F:\graddesign\labAlocation\LabAlocation\LA.Common\bin\Debug\LA.Common.dll
 F:\graddesign\labAlocation\LabAlocation\LA.Common\bin\Debug\LA.Common.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.Common\bin\Debug\Newtonsoft.Json.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Common\bin\Debug\Newtonsoft.Json.xml
 F:\graddesign\labAlocation\LabAlocation\LA.Common\obj\Debug\LA.Common.dll
 F:\graddesign\labAlocation\LabAlocation\LA.Common\obj\Debug\LA.Common.pdb
-F:\graddesign\labAlocation\LabAlocation\LA.Common\obj\Debug\LA.Common.csprojResolveAssemblyReference.cache

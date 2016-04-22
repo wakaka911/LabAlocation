@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace LA.Domain
 {
-    public class test
+    public class test :PersistenceEntity
     {
-        public virtual string id { get; set; }
         public virtual string testField { get;set; }
     }
 }

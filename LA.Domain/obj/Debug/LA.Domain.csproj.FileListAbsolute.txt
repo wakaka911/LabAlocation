@@ -3,4 +3,3 @@ F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Debug\LA.Domain.dll
 F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Debug\LA.Domain.pdb
 F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Debug\LA.Domain.dll
 F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Debug\LA.Domain.pdb
-F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Debug\LA.Domain.csprojResolveAssemblyReference.cache

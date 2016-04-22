@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LA.BLL;
+using LA.Common;
+using LA.Domain;
 
 namespace LabAlocation.Controllers.SubCtrs
 {
@@ -11,9 +14,13 @@ namespace LabAlocation.Controllers.SubCtrs
         //
         // GET: /HomeSub/
 
-        public ActionResult Index()
+        public ActionResult Demo()
         {
-            return View();
+            string testField = Request["testField"] == null ? "" : Request["testField"].ToString();
+
+            MsgBox mb = new DemoManager().DemoTest(testField);
+
+            return Json(mb);
         }
 
     }
