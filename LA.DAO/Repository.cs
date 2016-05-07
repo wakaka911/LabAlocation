@@ -1,11 +1,11 @@
-﻿using System;
+﻿using LA.Domain;
+using NHibernate;
+using NHibernate.Criterion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LA.Domain;
-using NHibernate;
-using NHibernate.Criterion;
 
 namespace LA.DAO
 {

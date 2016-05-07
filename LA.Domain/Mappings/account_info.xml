@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LA.Domain" assembly="LA.Domain">
+
+  <class name="test" table="test">
+
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="account" type="String">
+      <column name="account" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="password" type="String">
+      <column name="password" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
+    </property>
+  </class>
+
+</hibernate-mapping>

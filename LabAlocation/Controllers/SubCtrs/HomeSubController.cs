@@ -13,7 +13,7 @@ namespace LabAlocation.Controllers.SubCtrs
     {
         //
         // GET: /HomeSub/
-
+        [Authorize]
         public ActionResult Demo()
         {
             string testField = Request["testField"] == null ? "" : Request["testField"].ToString();
