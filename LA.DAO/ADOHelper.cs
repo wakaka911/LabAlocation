@@ -54,6 +54,7 @@ namespace LA.DAO
             }
             conn.Open();
             int i=comm.ExecuteNonQuery();
+            conn.Close();
             if (i < 0)
             {
                 mb.status = false;
