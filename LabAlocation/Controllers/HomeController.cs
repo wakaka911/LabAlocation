@@ -53,6 +53,7 @@ namespace LabAlocation.Controllers
             MsgBox mb = new MsgBox();
             bool flag = false;
             flag = AccountManager.getAI(account, password);
+            //AccountManager.GetAccountInfo(account);
             if (account != null && password != null && flag)
             {
                 FormsAuthentication.SetAuthCookie(account, false);

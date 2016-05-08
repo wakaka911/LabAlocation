@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="AccountManager.cs" />
     <Compile Include="DemoManager.cs" />
+    <Compile Include="LabManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

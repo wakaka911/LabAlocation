@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\account_info.cs" />
+    <Compile Include="Entities\lab_info.cs" />
     <Compile Include="Entities\test.cs" />
     <Compile Include="PersistenceEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,10 +54,13 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\account_info.xml" />
+    <EmbeddedResource Include="Mappings\account_info.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\test.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\lab_info.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

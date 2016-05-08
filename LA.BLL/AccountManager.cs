@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LA.DAO;
-using LA.Domain.Entities;
+using LA.Domain;
 
 namespace LA.BLL
 {

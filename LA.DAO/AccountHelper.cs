@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using LA.Domain;
-using LA.Domain.Entities;
+using LA.Domain;
 using LA.Common;
 
 namespace LA.DAO
