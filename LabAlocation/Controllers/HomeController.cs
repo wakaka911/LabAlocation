@@ -38,6 +38,15 @@ namespace LabAlocation.Controllers
 
             return View();
         }
+        [Authorize]
+        public ActionResult Home() {
+            return View();
+        }
+
+
+
+
+
         [HttpPost]
         public ActionResult Login(string account, string password)
         {

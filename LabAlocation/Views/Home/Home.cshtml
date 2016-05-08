@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+    <link href="~/Asset/CSS/Home.css" rel="stylesheet" />
+    <link href="~/Asset/easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="~/Asset/easyui/themes/icon.css" rel="stylesheet" />
+    <script src="~/Asset/jQuery/jquery-1.12.3.js"></script>
+    <script src="~/Asset/CommonJS/Common.js"></script>
+    <script src="~/Asset/easyui/jquery.min.js"></script>
+    <script src="~/Asset/easyui/jquery.easyui.min.js"></script>
+    <script src="~/Asset/js/Home/Home.js"></script>
+</head>
+<body class="easyui-layout" id="cc">
+    <div data-options="region:'north',title:'',split:true" style="height:100px;" id="north">
+        <h1>实验室管理系统</h1>
+    </div>
+    <div data-options="region:'west',title:'菜单',split:true" id="west">
+        <br/><a href="#" id="lessonsForLabs">实验室课表查询</a><hr/>
+        <br/><a href="#">预约实验室</a><hr />
+        <br/><a href="#">预约实验室审核</a><hr />
+        <br/><a href="#">低值耐用品登记</a><hr />
+        <br/><a href="#">实验室物品领用</a><hr />
+        <br/><a href="#">实验室物品领用审核</a><hr />
+        <br/><a href="#">用户权限管理</a><hr />
+    </div>
+    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;" id="center">
+        <div id="mainTabs" class="easyui-tabs" fit="true" border="false">
+
+        </div>
+
+        <div id="rcmenu" class="easyui-menu" style="">
+
+            <div data-options="iconCls:'icon-cancel'" id="closecur">
+                关闭
+            </div>
+            <div id="closeall">
+                关闭全部
+            </div>
+            <div id="closeother">
+                关闭其他
+            </div>
+        </div>
+    </div>
+</body>
+</html>

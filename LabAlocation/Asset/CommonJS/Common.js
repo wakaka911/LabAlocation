@@ -31,3 +31,36 @@
         });
     }
 })
+//添加标签
+function addPanel(menuid, menutext, url) {
+    var jq = top.jQuery;
+    var isexist = jq('#mainTabs').tabs('exists', menutext)
+    if (isexist) {
+        $.messager.confirm('提示', '此页面已经打开，是否刷新该页面？', function (r) {
+            if (r) {
+                var tab = jq('#mainTabs').tabs('getTab', menutext);
+                jq('#mainTabs').tabs('update', {
+                    tab: tab,
+                    options: {
+                        title: menutext,
+                        loadingMessage: "正在加载数据...",
+                        cache: false,
+                        content: "<iframe id='icontent' marginheight='0' marginwidth='0' frameborder='0' scrolling='auto' width='100%' height='100%' src='" + url + "'/>",
+                        closable: true
+                    }
+                });
+            }
+            jq('#mainTabs').tabs('select', menutext);
+        });
+
+    }
+    else {
+        jq('#mainTabs').tabs('add', {
+            title: menutext,
+            loadingMessage: "正在加载数据...",
+            cache: false,
+            content: "<iframe id='icontent' marginheight='0' marginwidth='0' frameborder='0' scrolling='auto' width='100%' height='100%' src='" + url + "'/>",
+            closable: true
+        });
+    }
+}
