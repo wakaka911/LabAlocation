@@ -41,6 +41,24 @@ namespace LA.BLL
             return mb;
 
         }
+
+        public MsgBox tempLessonDel(string ID)
+        {
+            MsgBox mb = new MsgBox();
+            try
+            {
+                new Repository<temp_lesson>().Delete(ID);
+                mb.status = true;
+                mb.msg = "删除成功。";
+            }
+            catch (Exception e)
+            {
+                mb.status = false;
+                mb.msg = e.Message;
+            }
+            return mb;
+
+        }
         public GridData getLessonList(int pageIndex, int pageSize)
         {
             GridData gd = new GridData();
@@ -49,6 +67,20 @@ namespace LA.BLL
             MsgBox mb = new MsgBox();
             sql.Append("select ROW_NUMBER() over(order by a.CREATED desc) as rn, a.*,t.teacherName from lesson a ");
             sql.Append("left join teacher t on a.lessonTeacher=t.teacherNo ");
+            int total = 0;
+            gd.rows = new ADOHelper().pageSplit(pageIndex, pageSize, sql.ToString(), qf, out total, ref mb);
+            gd.total = total;
+            return gd;
+        }
+
+        public GridData getTempLessonList(int pageIndex, int pageSize) {
+            GridData gd = new GridData();
+            StringBuilder sql = new StringBuilder();
+            List<QueryField> qf = new List<QueryField>();
+            MsgBox mb = new MsgBox();
+            sql.Append("select ROW_NUMBER() over(order by tl.CREATED desc) as rn, tl.*,t.teacherName,li.lab_name as labName from temp_lesson tl ");
+            sql.Append("left join teacher t on tl.lessonTeacher=t.teacherNo ");
+            sql.Append("left join lab_info li on li.ID=tl.lessonLab ");
             int total = 0;
             gd.rows = new ADOHelper().pageSplit(pageIndex, pageSize, sql.ToString(), qf, out total, ref mb);
             gd.total = total;
@@ -70,6 +102,26 @@ namespace LA.BLL
                     ls.teacherName = "";
             }
             return l;
+        }
+
+
+        public MsgBox saveTempLesson(temp_lesson tl)
+        {
+            MsgBox mb = new MsgBox();
+            tl.lessonWeekday = (int)tl.lessonDay.DayOfWeek==0?7:(int)tl.lessonDay.DayOfWeek;
+            tl.status = 0;//0未审核；
+            try
+            {
+                new Repository<temp_lesson>().Insert(tl);
+                mb.status = true;
+                mb.msg = "保存成功。";
+            }
+            catch (Exception e)
+            {
+                mb.status = false;
+                mb.msg = e.Message;
+            }
+            return mb;
         }
     }
 }

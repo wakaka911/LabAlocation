@@ -18,7 +18,6 @@ function loadLessonList() {
         valueField: 'value',
         textField: 'text'
     });
-
 }
 function showDialog() {
     $("#win").window('open');

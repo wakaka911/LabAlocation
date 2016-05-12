@@ -490,6 +490,7 @@
     <Content Include="Asset\jQuery\jquery-1.12.3.js" />
     <Content Include="Asset\js\Home\Home.js" />
     <Content Include="Asset\js\Lab\Lab.js" />
+    <Content Include="Asset\js\Lab\labBook.js" />
     <Content Include="Asset\js\Lesson\LessonAdd.js" />
     <Content Include="Asset\js\Lesson\LessonTable.js" />
     <Content Include="Config\hibernate.cfg.xml" />
@@ -561,6 +562,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\LowValue\LowValue.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Lab\labBook.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

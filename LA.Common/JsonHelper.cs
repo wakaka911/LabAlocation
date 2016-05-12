@@ -32,6 +32,12 @@ namespace LA.Common
             timeFormat.DateTimeFormat = "yyyy/MM/dd hh:mm:ss";
             return JsonConvert.SerializeObject(t, Formatting.Indented, timeFormat);
         }
+        public static string JsonDllSerializeEntity3<T>(T t)
+        {
+            IsoDateTimeConverter timeFormat = new IsoDateTimeConverter();
+            timeFormat.DateTimeFormat = "yyyy/MM/dd";
+            return JsonConvert.SerializeObject(t, Formatting.Indented, timeFormat);
+        }
         public static string JsonDllSerializeList<T>(List<T> tl)
         {
             IsoDateTimeConverter timeFormat = new IsoDateTimeConverter();

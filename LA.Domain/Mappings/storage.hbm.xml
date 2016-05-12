@@ -19,7 +19,7 @@
     <property name="goodsType" type="String">
       <column name="goodsType" sql-type="varchar" not-null="false"/>
     </property>
-    <property name="goodsNum" type="int">
+    <property name="goodsNum" type="Int32">
       <column name="goodsNum" sql-type="int" not-null="false"/>
     </property>
     <property name="goodsText" type="String">
