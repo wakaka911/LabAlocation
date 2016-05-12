@@ -9,7 +9,7 @@
       <generator class="assigned" />
     </id>
     <property name="lab_name" type="String">
-      <column name="lab_name" sql-type="varchar" not-null="false" />
+      <column name="lab_name" sql-type="nvarchar" not-null="false" />
     </property>
 
     <property name="CREATED" type="DateTime">

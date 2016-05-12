@@ -4,10 +4,10 @@
 <script src="~/Asset/js/Lab/Lab.js"></script>
 <link href="~/Asset/CSS/Lab.css" rel="stylesheet" />
 <div>
-    <a id="add_lab" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="addLab()">添加实验室</a>
+    <a id="add_lab" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="showDialog()">添加实验室</a>
 </div>
 <div>
-    <table id="lab_list">
+    <table id="lab_list" class="easyui-datagrid">
         <thead>
             <tr>
                 <th data-options="field:'lab_name',width:50">实验室</th>
@@ -16,8 +16,8 @@
         </thead>
     </table>
 </div>
-<div id="win" class="easyui-window" title="实验室添加" data-options="iconCls:'icon-tip',modal:true,closed:true,maximized:true">
-    <div>实验室名称：<input id="lab_name" type="text" style="border:none;border-bottom: 1px solid;"/></div>
+<div id="win" class="easyui-window" title="实验室添加" style="width: 600px; height: 400px;text-align:center;padding-top:130px;" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div style="margin-bottom:100px;">实验室名称：<input id="lab_name" type="text" style="border:none;border-bottom: 1px solid;"/></div>
     <br />
     <a id="save_lab" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="addLab()">保存</a>
 </div>

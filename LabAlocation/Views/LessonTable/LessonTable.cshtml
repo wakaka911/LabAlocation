@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "LessonTable";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<link href="~/Asset/CSS/LessonTable.css" rel="stylesheet" />
+<script src="~/Asset/js/Lesson/LessonTable.js"></script>
+<div class="main">
+
+    <div>
+        <h1>南京森林警察学院课表</h1>
+        <div id="lab">选择实验室查看课表：<input id="labSelect" class="easyui-combobox" /></div>
+    </div>
+  
+    <div id="content">
+        <table id="schedule" border="1" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="2"></td>
+                <td class="week_head">星期一</td>
+                <td class="week_head">星期二</td>
+                <td class="week_head">星期三</td>
+                <td class="week_head">星期四</td>
+                <td class="week_head">星期五</td>
+                <td class="week_head">星期六</td>
+                <td class="week_head">星期日</td>
+            </tr>
+            <tr>
+                <td rowspan="2">上<br />午</td>
+                <td>一</td>
+                <td id="11"></td>
+                <td id="21"></td>
+                <td id="31"></td>
+                <td id="41"></td>
+                <td id="51"></td>
+                <td id="61"></td>
+                <td id="71"></td>
+            </tr>
+            <tr>
+                <td>二</td>
+                <td id="12"></td>
+                <td id="22"></td>
+                <td id="32"></td>
+                <td id="42"></td>
+                <td id="52"></td>
+                <td id="62"></td>
+                <td id="72"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">下<br />午</td>
+                <td>三</td>
+                <td id="13"></td>
+                <td id="23"></td>
+                <td id="33"></td>
+                <td id="43"></td>
+                <td id="53"></td>
+                <td id="63"></td>
+                <td id="73"></td>
+            </tr>
+            <tr>
+                <td>四</td>
+                <td id="14"></td>
+                <td id="24"></td>
+                <td id="34"></td>
+                <td id="44"></td>
+                <td id="54"></td>
+                <td id="64"></td>
+                <td id="74"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">晚<br />上</td>
+                <td>五</td>
+                <td id="15"></td>
+                <td id="25"></td>
+                <td id="35"></td>
+                <td id="45"></td>
+                <td id="55"></td>
+                <td id="65"></td>
+                <td id="75"></td>
+            </tr>
+            <tr>
+                <td>六</td>
+                <td id="16"></td>
+                <td id="26"></td>
+                <td id="36"></td>
+                <td id="46"></td>
+                <td id="56"></td>
+                <td id="66"></td>
+                <td id="76"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>

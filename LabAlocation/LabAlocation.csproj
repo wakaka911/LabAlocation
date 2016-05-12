@@ -124,8 +124,18 @@
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LabController.cs" />
+    <Compile Include="Controllers\LessonTableController.cs" />
+    <Compile Include="Controllers\LowValueController.cs" />
+    <Compile Include="Controllers\StorageController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubCtrs\HomeSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LabSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\LessonTableSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\SelectionController.cs" />
+    <Compile Include="Controllers\SubCtrs\StorageSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\StudentSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\TeacherSubController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,8 +146,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Asset\CommonJS\Common.js" />
+    <Content Include="Asset\CSS\CommonCSS.css" />
     <Content Include="Asset\CSS\Home.css" />
     <Content Include="Asset\CSS\Lab.css" />
+    <Content Include="Asset\CSS\LessonTable.css" />
     <Content Include="Asset\easyui\jquery.easyui.min.js" />
     <Content Include="Asset\easyui\jquery.min.js" />
     <Content Include="Asset\easyui\themes\black\accordion.css" />
@@ -478,6 +490,8 @@
     <Content Include="Asset\jQuery\jquery-1.12.3.js" />
     <Content Include="Asset\js\Home\Home.js" />
     <Content Include="Asset\js\Lab\Lab.js" />
+    <Content Include="Asset\js\Lesson\LessonAdd.js" />
+    <Content Include="Asset\js\Lesson\LessonTable.js" />
     <Content Include="Config\hibernate.cfg.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -529,6 +543,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Lab\Lab.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LessonTable\LessonAdd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Storage\StorageAdd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\StudentAdd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\TeacherAdd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LessonTable\LessonTable.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LowValue\LowValue.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

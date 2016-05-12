@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using LA.Common;
+using LA.Domain;
 
 namespace LA.DAO
 {
@@ -69,6 +70,23 @@ namespace LA.DAO
 
         }
 
-
+        public DataTable pageSplit(int pageIndex, int pageSize, string sql, List<QueryField> conditions, out int total, ref MsgBox mb)
+        {
+            DataSet ds = NHHelper.ExecuteDataset(sql, conditions);
+            if (ds != null && ds.Tables[0] != null)
+            {
+                total = ds.Tables[0].Rows.Count;
+                string pageSql = string.Format("select temp.* from ({0}) temp where temp.rn between {1} and {2} ", sql, (pageIndex - 1) * pageSize + 1, pageIndex * pageSize);
+                DataTable dt = NHHelper.ExecuteDataset(pageSql, conditions).Tables[0];
+                return dt;
+            }
+            else
+            {
+                total = 0;
+                mb.status = false;
+                mb.msg = "未查询到相关数据.";
+                return new DataTable();
+            }
+        }
     }
 }

@@ -56,11 +56,16 @@
     <Compile Include="ADOHelper.cs" />
     <Compile Include="DemoDAO.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="LabDAO.cs" />
+    <Compile Include="LessonDAO.cs" />
     <Compile Include="NHHelper.cs" />
     <Compile Include="NHibernateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="SessionHelper.cs" />
+    <Compile Include="StorageDao.cs" />
+    <Compile Include="StudentDao.cs" />
+    <Compile Include="TeacherDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LA.Common\LA.Common.csproj">

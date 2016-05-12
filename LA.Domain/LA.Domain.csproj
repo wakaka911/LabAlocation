@@ -40,7 +40,12 @@
   <ItemGroup>
     <Compile Include="Entities\account_info.cs" />
     <Compile Include="Entities\lab_info.cs" />
+    <Compile Include="Entities\Lesson.cs" />
+    <Compile Include="Entities\Storage.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Entities\test.cs" />
+    <Compile Include="GridData.cs" />
     <Compile Include="PersistenceEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryField.cs" />
@@ -61,6 +66,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\lab_info.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\lesson.hbm.xml" />
+    <EmbeddedResource Include="Mappings\storage.hbm.xml" />
+    <EmbeddedResource Include="Mappings\student.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\teacher.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

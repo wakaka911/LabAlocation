@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LA.Domain" assembly="LA.Domain">
+
+  <class name="Lesson" table="lesson">
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="lessonName" type="String">
+      <column name="lessonName" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="lessonNo" type="String">
+      <column name="lessonNo" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="lessonTeacher" type="String">
+      <column name="lessonTeacher" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="lessonWeekday" type="Int32">
+      <column name="lessonWeekday" sql-type="int" not-null="false"/>
+    </property>
+    <property name="lessonArrange" type="Int32">
+      <column name="lessonArrange" sql-type="int" not-null="false"/>
+    </property>
+    <property name="lessonRemark" type="String">
+      <column name="lessonRemark" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="lessonLab" type="String">
+      <column name="lessonLab" sql-type="nvarchar" not-null="false"/>
+    </property>
+  </class>
+
+
+</hibernate-mapping>

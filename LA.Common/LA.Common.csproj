@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="DataObj.cs" />
+    <Compile Include="EasyUISelection.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="MsgBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
