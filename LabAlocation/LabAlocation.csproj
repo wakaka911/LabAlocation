@@ -566,6 +566,9 @@
   <ItemGroup>
     <Content Include="Views\Lab\labBook.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Lab\labBookApprove.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

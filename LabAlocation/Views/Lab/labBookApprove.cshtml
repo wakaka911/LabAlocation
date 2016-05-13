@@ -1,11 +1,9 @@
 ﻿@{
-    ViewBag.Title = "labBook";
+    ViewBag.Title = "labBookApprove";
     Layout = "~/Views/Shared/_Content.cshtml";
 }
+
 <script src="~/Asset/js/Lab/labBook.js"></script>
-<div>
-    <a id="lab_apply" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="showDialog()">申请实验室课程</a>
-</div>
 <div>
     <table id="lesson_list" class="easyui-datagrid">
         <thead>
@@ -16,7 +14,7 @@
                 <th data-options="field:'lessonDay',width:50">上课日期</th>
                 <th data-options="field:'lessonWeekday',width:50">周几</th>
                 <th data-options="field:'lessonArrange',width:50">节次</th>
-                <th data-options="field:'Operate',formatter:Operate">审核状态</th>
+                <th data-options="field:'Approve',formatter:Approve">操作</th>
             </tr>
         </thead>
     </table>

@@ -48,7 +48,17 @@ function saveParams() {
 }
 
 function Operate(value, rowData, rowIndex) {
-    var link = "<a href=# onclick=deleteTempLesson('" + rowIndex + "')>删除</a>";
+    
+    return rowData.status;
+}
+function Approve(value, rowData, rowIndex) {
+    var link;
+    if(rowData.status==0)
+        link = "<a href=# onclick=approveTempLesson('" + rowIndex + "')>通过</a>" + "&nbsp;" + "<a href=# onclick=deleteTempLesson('" + rowIndex + "')>拒绝</a>";
+    if (rowData.status == 1)
+        link = "审核通过";
+    if (rowData.status != 0 && rowData.status != 1)
+        link = "审核状态异常，请通知相关老师重新申请并删除该条数据。&nbsp;<a href=# onclick=deleteTempLesson('" + rowIndex + "')>删除</a>"
     return link;
 }
 function deleteTempLesson(rowIndex) {
@@ -60,6 +70,14 @@ function deleteTempLesson(rowIndex) {
         loadLessonList();
     }, "post", true);
 }
-
+function approveTempLesson(rowIndex) {
+    var rows = $('#lesson_list').datagrid('getRows');
+    var lesson_id = rows[rowIndex].ID;
+    var params = { lesson_id: lesson_id };
+    $.DoAjax("/LessonTableSub/approveTempLesson", params, function (jsonData) {
+        alert(jsonData.msg);
+        loadLessonList();
+    }, "post", true);
+}
 
 function getParams() { }

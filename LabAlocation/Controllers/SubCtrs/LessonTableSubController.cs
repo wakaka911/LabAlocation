@@ -141,5 +141,36 @@ namespace LabAlocation.Controllers.SubCtrs
             }
             return Json(mb);
         }
+        //根据实验室id查询实验室本周的临时课表
+        public ActionResult labTempSchedule() {
+            string labID = Request["lab_id"] == null ? "" : Request["lab_id"].ToString();
+            MsgBox mb = new MsgBox();
+            if (string.IsNullOrEmpty(labID))
+            {
+                mb.status = false;
+                mb.msg = "实验室ID不能为空！";
+            }
+            else
+            {
+                DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+                mb.obj = new LessonManager().getTempLabSchedule(labID,new TimeHelper().getThisWeekSE(dt));
+                mb.status = true;
+            }
+            return Json(mb);
+        }
+
+        //审核临时申请实验室
+        public ActionResult approveTempLesson() {
+            string lessonID = Request["lesson_id"] == null ? "" : Request["lesson_id"].ToString();
+            MsgBox mb = new MsgBox();
+            if (string.IsNullOrEmpty(lessonID))
+            {
+                mb.status = false;
+                mb.msg = "申请ID不能为空。";
+            }
+            else
+                mb = new LessonManager().approveTempLesson(lessonID);
+            return Json(mb);
+        }
     }
 }

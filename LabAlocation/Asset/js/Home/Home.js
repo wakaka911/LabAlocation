@@ -11,4 +11,7 @@
     $("#labBook").click(function () {
         addPanel("0004", "预约实验室", "/Lab/labBook");
     });
+    $("#labBookApprove").click(function () {
+        addPanel("0005","预约实验室审核","/Lab/labBookApprove");
+    });
 });

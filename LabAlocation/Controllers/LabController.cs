@@ -24,6 +24,9 @@ namespace LabAlocation.Controllers
         public ActionResult labBook() {
             return View();
         }
+        public ActionResult labBookApprove() {
+            return View();
+        }
 
     }
 }
