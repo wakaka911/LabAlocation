@@ -14,4 +14,7 @@
     $("#labBookApprove").click(function () {
         addPanel("0005","预约实验室审核","/Lab/labBookApprove");
     });
+    $("#lowValue").click(function () {
+        addPanel("0006", "低值耐用品登记", "/LowValue/LowValue");
+    });
 });

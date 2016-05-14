@@ -3,97 +3,196 @@
     Layout = "~/Views/Shared/_Content.cshtml";
 }
 
-<style>
-    tr {
-        height : 40px;
-        text-align : center; 
-    }
-    td {
-        width:100px;
-    }
-    input {
-        border-style: solid; 
-        border-color: #FFFFFF;
-    }
+<link href="~/Asset/CSS/LowValue.css" rel="stylesheet" />
+<script src="~/Asset/js/LowValue/LowValue.js"></script>
 
-</style>
-
-<div>南京森林警察学院</div>
-<div>低值耐用品及耗材验收单</div>
-<br />
 <div>
-    <span>领用单位：</span><input size="30"/>
-    <span style="padding-left:50px;">验收日期</span><input size="3" />
-    <span>年</span><input size="3"/>
-    <span>月</span><input size="3" />
-    <span>日</span>
+    <a id="add_sheet" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="showDialog()">登记</a>
 </div>
-<br />
-
 <div>
-    <table border="1" cellpadding="0" cellspacing="0">
-        <tr>
-            <td>编号</td>
-            <td>名称</td>
-            <td>规格型号</td>
-            <td>单位</td>
-            <td>数量</td>
-            <td>单价</td>
-            <td>金额（元）</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="3" rowspan="2"></td>
-            <td rowspan="2"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+    <table id="sheet_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'sheet_No',width:50">验收单编号</th>
+                <th data-options="field:'takeUnit',width:50">采购单位</th>
+                <th data-options="field:'taker',width:50">领用人</th>
+                <th data-options="field:'sumPrice',width:50">合计金额</th>
+                <th data-options="field:'Operate',formatter:Operate">操作</th>
+            </tr>
+        </thead>
     </table>
 </div>
-<br />
 
-<div>
-    <span>部门负责人:</span><input size="6" />
-    <span style="padding-left:20px;">采购人:</span><input size="6" />
-    <span style="padding-left:20px;">领用人:</span><input size="6" />
-    <span style="padding-left:20px;">验收人:</span><input size="6" />
+
+
+<div id="lowValueSheet" class="easyui-window" title="课程添加" style="text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div id="head">
+        <span id="sheetNo">0000001</span>
+        <div style="width:677px;">
+            <h2 class="center_class">南京森林警察学院</h2>
+            <h1 class="center_class">低值耐用品及耗材验收单</h1>
+        </div>
+        <hr class="center_class" /><hr class="center_class" />
+
+    </div>
+    <div id="body">
+        <div style="margin-bottom:5px;">
+            <span>领物单位：<input type="text" id="takeUnit" /></span>
+            <span style="padding-left:236px;">验收日期<input id="checkTime" type="text" class="easyui-datebox" /></span>
+        </div>
+
+        <div>
+            <table id="sheet" border="1" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="noHead">编号</td>
+                    <td id="nameHead">名称</td>
+                    <td id="modelHead">规格型号</td>
+                    <td class="small">单位</td>
+                    <td class="small">数量</td>
+                    <td class="small">单价</td>
+                    <td id="totalPriceHead">金额（元）</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="no1" /></td>
+                    <td><input type="text" id="name1"></td>
+                    <td><input type="text" id="model1"></td>
+                    <td><input type="text" id="unit1"></td>
+                    <td><input type="text" id="qty1"></td>
+                    <td><input type="text" id="price1"></td>
+                    <td><input type="text" id="totalPrice1"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="no2"></td>
+                    <td><input type="text" id="name2"></td>
+                    <td><input type="text" id="model2"></td>
+                    <td><input type="text" id="unit2"></td>
+                    <td><input type="text" id="qty2"></td>
+                    <td><input type="text" id="price2"></td>
+                    <td><input type="text" id="totalPrice2"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="no3"></td>
+                    <td><input type="text" id="name3"></td>
+                    <td><input type="text" id="model3"></td>
+                    <td><input type="text" id="unit3"></td>
+                    <td><input type="text" id="qty3"></td>
+                    <td><input type="text" id="price3"></td>
+                    <td><input type="text" id="totalPrice3"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="no4"></td>
+                    <td><input type="text" id="name4"></td>
+                    <td><input type="text" id="model4"></td>
+                    <td><input type="text" id="unit4"></td>
+                    <td><input type="text" id="qty4"></td>
+                    <td><input type="text" id="price4"></td>
+                    <td><input type="text" id="totalPrice4"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">附注</td>
+                    <td colspan="2">其他低值耐用品及低值易耗品等（附清单）</td>
+                    <td colspan="3" rowspan="2">合计</td>
+                    <td rowspan="2"><input type="text" id="sumPrice" /></td>
+                </tr>
+                <tr>
+                    <td>总额合计（元）</td>
+                    <td>￥：<input type="text" style="width:157px;" id="attachmentTotalPrice" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top:5px;">
+            <span>部门负责人:<input id="chairman" type="text" size="6" /></span>
+            <span style="padding-left:20px;">采购人:<input id="buyer" type="text" size="6" /></span>
+            <span style="padding-left:20px;">领用人:<input id="taker" type="text" size="6" /></span>
+            <span style="padding-left:20px;">验收人:<input id="checker" type="text" size="6" /></span>
+        </div>
+    </div>
+    <br />
+    <a id="save_sheet" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="saveLowValue()">保存</a>
+</div>
+
+<div id="lowValueSheet2" class="easyui-window" title="查看" style="text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div id="head2">
+        <span id="sheetNo2">0000000</span>
+        <div style="width:677px;">
+            <h2 class="center_class">南京森林警察学院</h2>
+            <h1 class="center_class">低值耐用品及耗材验收单</h1>
+        </div>
+        <hr class="center_class" /><hr class="center_class" />
+
+    </div>
+    <div id="body2">
+        <div style="margin-bottom:5px;">
+            <span>领物单位：<span id="takeUnit2" /></span>
+            <span style="padding-left:236px;">验收日期<span id="checkTime2"></span></span>
+        </div>
+
+        <div>
+            <table id="sheet2" border="1" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="noHead2">编号</td>
+                    <td id="nameHead2">名称</td>
+                    <td id="modelHead2">规格型号</td>
+                    <td class="small2">单位</td>
+                    <td class="small2">数量</td>
+                    <td class="small2">单价</td>
+                    <td id="totalPriceHead2">金额（元）</td>
+                </tr>
+                <tr>
+                    <td><span id="no12"></span></td>
+                    <td><span id="name12"></span></td>
+                    <td><span id="model12"></span></td>
+                    <td><span id="unit12"></span></td>
+                    <td><span id="qty12"></span></td>
+                    <td><span id="price12"></span></td>
+                    <td><span id="totalPrice12"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="no22"></span></td>
+                    <td><span id="name22"></span></td>
+                    <td><span id="model22"></span></td>
+                    <td><span id="unit22"></span></td>
+                    <td><span id="qty22"></span></td>
+                    <td><span id="price22"></span></td>
+                    <td><span id="totalPrice22"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="no32"></span></td>
+                    <td><span id="name32"></span></td>
+                    <td><span id="model32"></span></td>
+                    <td><span id="unit32"></span></td>
+                    <td><span id="qty32"></span></td>
+                    <td><span id="price32"></span></td>
+                    <td><span id="totalPrice32"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="no42"></span></td>
+                    <td><span id="name42"></span></td>
+                    <td><span id="model42"></span></td>
+                    <td><span id="unit42"></span></td>
+                    <td><span id="qty42"></span></td>
+                    <td><span id="price42"></span></td>
+                    <td><span id="totalPrice42"></span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">附注</td>
+                    <td colspan="2">其他低值耐用品及低值易耗品等（附清单）</td>
+                    <td colspan="3" rowspan="2">合计</td>
+                    <td rowspan="2"><span id="sumPrice2"></span></td>
+                </tr>
+                <tr>
+                    <td>总额合计（元）</td>
+                    <td>￥：<span id="attachmentTotalPrice2"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top:5px;">
+            <span>部门负责人:<input id="chairman2" type="text" size="6" readonly="readonly" /></span>
+            <span style="padding-left:20px;">采购人:<input id="buyer2" type="text" size="6" readonly="readonly" /></span>
+            <span style="padding-left:20px;">领用人:<input id="taker2" type="text" size="6" readonly="readonly" /></span>
+            <span style="padding-left:20px;">验收人:<input id="checker2" type="text" size="6" readonly="readonly" /></span>
+        </div>
+    </div>
 </div>

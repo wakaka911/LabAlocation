@@ -131,6 +131,7 @@
     <Compile Include="Controllers\SubCtrs\HomeSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LabSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LessonTableSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\LowValueSubController.cs" />
     <Compile Include="Controllers\SubCtrs\SelectionController.cs" />
     <Compile Include="Controllers\SubCtrs\StorageSubController.cs" />
     <Compile Include="Controllers\SubCtrs\StudentSubController.cs" />
@@ -150,6 +151,7 @@
     <Content Include="Asset\CSS\Home.css" />
     <Content Include="Asset\CSS\Lab.css" />
     <Content Include="Asset\CSS\LessonTable.css" />
+    <Content Include="Asset\CSS\LowValue.css" />
     <Content Include="Asset\easyui\jquery.easyui.min.js" />
     <Content Include="Asset\easyui\jquery.min.js" />
     <Content Include="Asset\easyui\themes\black\accordion.css" />
@@ -493,6 +495,7 @@
     <Content Include="Asset\js\Lab\labBook.js" />
     <Content Include="Asset\js\Lesson\LessonAdd.js" />
     <Content Include="Asset\js\Lesson\LessonTable.js" />
+    <Content Include="Asset\js\LowValue\LowValue.js" />
     <Content Include="Config\hibernate.cfg.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />

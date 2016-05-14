@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LA.Domain" assembly="LA.Domain">
+
+  <class name="low_value" table="low_value">
+
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="sheetNo" type="Int32">
+      <column name="sheetNo" sql-type="int" not-null="false" />
+    </property>
+    <property name="takeUnit" type="String">
+      <column name="takeUnit" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="checkTime" type="DateTime">
+      <column name="checkTime" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="no1" type="String">
+      <column name="no1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="name1" type="String">
+      <column name="name1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="model1" type="String">
+      <column name="model1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="unit1" type="String">
+      <column name="unit1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="qty1" type="String">
+      <column name="qty1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="price1" type="String">
+      <column name="price1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="totalPrice1" type="String">
+      <column name="totalPrice1" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="no2" type="String">
+      <column name="no2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="name2" type="String">
+      <column name="name2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="model2" type="String">
+      <column name="model2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="unit2" type="String">
+      <column name="unit2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="qty2" type="String">
+      <column name="qty2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="price2" type="String">
+      <column name="price2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="totalPrice2" type="String">
+      <column name="totalPrice2" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="no3" type="String">
+      <column name="no3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="name3" type="String">
+      <column name="name3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="model3" type="String">
+      <column name="model3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="unit3" type="String">
+      <column name="unit3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="qty3" type="String">
+      <column name="qty3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="price3" type="String">
+      <column name="price3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="totalPrice3" type="String">
+      <column name="totalPrice3" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="no4" type="String">
+      <column name="no4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="name4" type="String">
+      <column name="name4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="model4" type="String">
+      <column name="model4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="unit4" type="String">
+      <column name="unit4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="qty4" type="String">
+      <column name="qty4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="price4" type="String">
+      <column name="price4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="totalPrice4" type="String">
+      <column name="totalPrice4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="sumPrice" type="String">
+      <column name="sumPrice" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="attachmentTotalPrice" type="String">
+      <column name="attachmentTotalPrice" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="chairman" type="String">
+      <column name="chairman" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="buyer" type="String">
+      <column name="buyer" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="taker" type="String">
+      <column name="taker" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="checker" type="String">
+      <column name="checker" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    
+    
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
+    </property>
+  </class>
+
+</hibernate-mapping>

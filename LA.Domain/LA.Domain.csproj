@@ -41,6 +41,7 @@
     <Compile Include="Entities\account_info.cs" />
     <Compile Include="Entities\lab_info.cs" />
     <Compile Include="Entities\Lesson.cs" />
+    <Compile Include="Entities\low_value.cs" />
     <Compile Include="Entities\Storage.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Teacher.cs" />
@@ -78,6 +79,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\temp_lesson.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\low_value.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
