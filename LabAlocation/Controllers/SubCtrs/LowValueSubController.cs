@@ -1,5 +1,8 @@
-﻿using System;
+﻿using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -75,5 +78,37 @@ namespace LabAlocation.Controllers.SubCtrs
             return Json(mb);
         }
 
+        public ActionResult getSheetNo() {
+            MsgBox mb = new MsgBox();
+            try
+            {
+                mb.obj = new LowValueManager().getSheetNo();
+                mb.status = true;
+                mb.msg = "获取编号成功。";
+            }
+            catch (Exception e)
+            {
+                mb.status = false;
+                mb.msg = e.Message;
+            }
+            return Json(mb);
+        }
+
+        public FileResult getExport() {
+            DataTable dt = new LowValueManager().getExcel();
+            NPOI.SS.UserModel.IWorkbook workbook = new NPOI.XSSF.UserModel.XSSFWorkbook();
+            List<string> ttls = new List<string> { "数据库记录ID","单据编号", "领物单位", "验收日期", "编号1", "名称1", "规格型号1", "单位1", "数量1", "单价1", "金额1（元）", "编号2", "名称2", "规格型号2", "单位2", "数量2", "单价2", "金额2（元）", "编号3", "名称3", "规格型号3", "单位3", "数量3", "单价3", "金额3（元）", "编号4", "名称4", "规格型号4", "单位4", "数量4", "单价4", "金额4（元）", "其他总额合计（元）", "合计", "部门负责人", "采购人", "领用人", "验收人","更新日期","创建日期"};
+            List<int> cols = new List<int>();
+            for (int i = 0; i < 40; i++)
+                cols.Add(i);
+            ExportHelper.CreateExcel(workbook, ttls, cols, dt, "低值耐用品及耗材验收单", "低值耐用品及耗材验收单", "");
+            using (MemoryStream ms = new MemoryStream())
+            {
+                workbook.Write(ms);
+                var buffer = ms.GetBuffer();
+                ms.Close();
+                return File(buffer, "application/ms-excel", "验收单.xlsx");
+            }
+        }
     }
 }

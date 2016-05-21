@@ -10,7 +10,7 @@ namespace LabAlocation.Controllers
     {
         //
         // GET: /Teacher/
-
+        [Authorize]
         public ActionResult Index()
         {
             //ISession session = NHHelper.GetCurrentSession();
@@ -27,7 +27,7 @@ namespace LabAlocation.Controllers
             //NHHelper.CloseSession();
             return View();
         }
-
+        [Authorize]
         public ActionResult TeacherAdd() {
             return View();
         }

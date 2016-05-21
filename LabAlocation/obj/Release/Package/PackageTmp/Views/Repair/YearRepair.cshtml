@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "YearRepair";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script src="~/Asset/js/Repair/YearRepair.js"></script>
+<div>
+    <a id="caculate" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="caculate()">计算当年维修数</a>
+</div>
+<div>
+    <table id="year_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'year',width:50">维修年</th>
+                <th data-options="field:'qty',width:50">维修完成数</th>
+            </tr>
+        </thead>
+    </table>
+</div>

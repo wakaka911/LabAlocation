@@ -43,6 +43,9 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Lib\dotnet4\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -50,6 +53,18 @@
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\nhibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Lib\dotnet4\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Lib\dotnet4\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\Lib\dotnet4\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\Lib\dotnet4\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,12 +141,16 @@
     <Compile Include="Controllers\LabController.cs" />
     <Compile Include="Controllers\LessonTableController.cs" />
     <Compile Include="Controllers\LowValueController.cs" />
+    <Compile Include="Controllers\PropertyController.cs" />
+    <Compile Include="Controllers\RepairController.cs" />
     <Compile Include="Controllers\StorageController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubCtrs\HomeSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LabSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LessonTableSubController.cs" />
     <Compile Include="Controllers\SubCtrs\LowValueSubController.cs" />
+    <Compile Include="Controllers\SubCtrs\PropertySubController.cs" />
+    <Compile Include="Controllers\SubCtrs\RepairSubController.cs" />
     <Compile Include="Controllers\SubCtrs\SelectionController.cs" />
     <Compile Include="Controllers\SubCtrs\StorageSubController.cs" />
     <Compile Include="Controllers\SubCtrs\StudentSubController.cs" />
@@ -152,6 +171,10 @@
     <Content Include="Asset\CSS\Lab.css" />
     <Content Include="Asset\CSS\LessonTable.css" />
     <Content Include="Asset\CSS\LowValue.css" />
+    <Content Include="Asset\CSS\PropertyReg.css" />
+    <Content Include="Asset\CSS\PropertyTake.css" />
+    <Content Include="Asset\CSS\reset.css" />
+    <Content Include="Asset\CSS\structure.css" />
     <Content Include="Asset\easyui\jquery.easyui.min.js" />
     <Content Include="Asset\easyui\jquery.min.js" />
     <Content Include="Asset\easyui\themes\black\accordion.css" />
@@ -496,6 +519,13 @@
     <Content Include="Asset\js\Lesson\LessonAdd.js" />
     <Content Include="Asset\js\Lesson\LessonTable.js" />
     <Content Include="Asset\js\LowValue\LowValue.js" />
+    <Content Include="Asset\js\PropertyReg\PropertyReg.js" />
+    <Content Include="Asset\js\PropertyTake\PropertyTake.js" />
+    <Content Include="Asset\js\Repair\Repair.js" />
+    <Content Include="Asset\js\Repair\RepairList.js" />
+    <Content Include="Asset\js\Repair\YearRepair.js" />
+    <Content Include="Asset\js\Student\StudentAdd.js" />
+    <Content Include="Asset\js\Teacher\TeacherAdd.js" />
     <Content Include="Config\hibernate.cfg.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -571,6 +601,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Lab\labBookApprove.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Property\PropertyTake.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Repair\Repair.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Repair\RepairList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\labAlocation.pubxml" />
+    <Content Include="Views\Repair\YearRepair.cshtml" />
+    <Content Include="Views\Home\PasswordChange.cshtml" />
+    <Content Include="Views\Property\PropertyReg.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

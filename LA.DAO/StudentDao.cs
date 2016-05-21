@@ -11,7 +11,7 @@ namespace LA.DAO
     public class StudentDAO
     {
         //增加学生
-        public MsgBox insertStudent(Student s)
+        public MsgBox insertStudent(Student s,account_info a)
         {
             MsgBox mb = new MsgBox();
             mb.status = false;
@@ -23,6 +23,7 @@ namespace LA.DAO
             try
             {
                 new Repository<Student>().Insert(s);
+                new Repository<account_info>().Insert(a);
                 mb.msg = "保存成功！";
                 mb.status = true;
             }

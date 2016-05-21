@@ -12,7 +12,7 @@ namespace LabAlocation.Controllers.SubCtrs
     {
         //
         // GET: /Selection/
-
+        //获得实验室选项
         public ActionResult getLabs()
         {
             List<EasyUISelection> le = new List<EasyUISelection>();

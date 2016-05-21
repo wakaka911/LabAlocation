@@ -10,12 +10,12 @@ namespace LabAlocation.Controllers
     {
         //
         // GET: /Student/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult StudentAdd()
         {
             return View();

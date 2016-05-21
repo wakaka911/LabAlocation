@@ -11,7 +11,8 @@ namespace LA.DAO
     public class TeacherDAO
     {
 
-        public MsgBox insertTeacher(Teacher t) {
+        public MsgBox insertTeacher(Teacher t, account_info a)
+        {
 
             MsgBox mb = new MsgBox();
             mb.status = false;
@@ -24,6 +25,7 @@ namespace LA.DAO
             try
             {
                 new Repository<Teacher>().Insert(t);
+                new Repository<account_info>().Insert(a);
                 mb.msg = "保存成功！";
                 mb.status = true;
             }

@@ -10,12 +10,12 @@ namespace LabAlocation.Controllers
     {
         //
         // GET: /LowValue/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult LowValue()
         {
 

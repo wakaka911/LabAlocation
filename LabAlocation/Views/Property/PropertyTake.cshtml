@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "PropertyTake";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<link href="~/Asset/CSS/PropertyTake.css" rel="stylesheet" />
+<script src="~/Asset/js/PropertyTake/PropertyTake.js"></script>
+<div>
+    <a id="add_take" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="showDialog()">添加领用</a>
+</div>
+<div>
+    <table id="take_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'typecn',width:50">领用类型</th>
+                <th data-options="field:'takeUnit',width:50">领用单位</th>
+                <th data-options="field:'takePeople',width:50">领用人</th>
+                <th data-options="field:'takeTime',width:50">领用时间</th>
+                <th data-options="field:'propertyName',width:50">物品名称</th>
+                <th data-options="field:'qty',width:50">数量</th>
+                <th data-options="field:'status',width:50">归还情况</th>
+                <th data-options="field:'Operate',formatter:Operate">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="win" class="easyui-window" title="领用申请" style="width: 600px; height: 400px;text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div class="winContent">领用单位：<input id="takeUnit" type="text"/></div>
+    <div class="winContent">领用类型：<select id="type"><option value="0">低值易耗品领用</option><option value="1">实验室设备、秘钥领用</option></select></div>
+    <div class="winContent">物品名称：<input id="propertyName" type="text" />&nbsp;数量：<input type="text" id="qty" /></div>
+    <div class="winContent"><a id="save_take" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="addTake()">保存</a></div>
+</div>

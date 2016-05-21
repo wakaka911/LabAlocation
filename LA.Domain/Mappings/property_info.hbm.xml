@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LA.Domain" assembly="LA.Domain">
+
+  <class name="property_info" table="property_info">
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="takeUnit" type="String">
+      <column name="takeUnit" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="perPrice" type="String">
+      <column name="perPrice" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="name" type="String">
+      <column name="name" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="model" type="String">
+      <column name="model" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="guige" type="String">
+      <column name="guige" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="producer" type="String">
+      <column name="producer" sql-type="nvarchar" not-null="false"/>
+    </property>
+
+    <property name="buyTime" type="DateTime">
+      <column name="buyTime" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="chuchangTime" type="DateTime">
+      <column name="chuchangTime" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="invoiceNo" type="String">
+      <column name="invoiceNo" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="taker" type="String">
+      <column name="taker" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="passer" type="String">
+      <column name="passer" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="path" type="String">
+      <column name="path" sql-type="nvarchar" not-null="false"/>
+    </property>
+  </class>
+
+
+</hibernate-mapping>

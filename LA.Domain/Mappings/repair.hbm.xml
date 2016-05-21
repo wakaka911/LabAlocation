@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LA.Domain" assembly="LA.Domain">
+
+  <class name="repair" table="repair">
+    <id name="ID" type="String" unsaved-value="null">
+      <column name="ID" sql-type="varchar" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="CREATED" type="DateTime">
+      <column name="CREATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="UPDATED" type="DateTime">
+      <column name="UPDATED" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="account" type="String">
+      <column name="account" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="labName" type="String">
+      <column name="labName" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="repairName" type="String">
+      <column name="repairName" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="isDone" type="Int32">
+      <column name="isDone" sql-type="int" not-null="false"/>
+    </property>
+  </class>
+
+
+</hibernate-mapping>

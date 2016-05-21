@@ -22,7 +22,7 @@ namespace LA.DAO
                 return ai[0];
             else
                 return new account_info();
-            
+
             //StringBuilder sql = new StringBuilder();
             //sql.Append("select * from account_info where account=@account ");
             //sql.Append("and password=@password ");
@@ -32,5 +32,19 @@ namespace LA.DAO
             //DataTable dt = new ADOHelper().Select(sp, sql);
             //return dt;
         }
+
+
+        public static bool isExist(string account) {
+            bool flag = false;
+            List<QueryField> qf = new List<QueryField>();
+            qf.Add(new QueryField() { Name = "account", Type = QueryFieldType.String, Value = account });
+            List<account_info> ai = new Repository<account_info>().GetList(qf, null) as List<account_info>;
+            if (ai.Count > 0)
+                flag = true;
+            else
+                flag = false;
+            return flag;
+        }
+
     }
 }

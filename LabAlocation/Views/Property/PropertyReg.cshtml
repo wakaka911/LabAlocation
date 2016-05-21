@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "PropertyReg";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script src="~/Asset/js/PropertyReg/PropertyReg.js"></script>
+<link href="~/Asset/CSS/PropertyReg.css" rel="stylesheet" />
+<div>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="showDialog()">登记</a>
+</div>
+<div>
+    <table id="property_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'invoiceNo',width:50">发票号</th>
+                <th data-options="field:'takeUnit',width:50">领用单位</th>
+                <th data-options="field:'name',width:50">仪器名称</th>
+                <th data-options="field:'Operate',formatter:Operate">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="win" class="easyui-window" title="资产登记" style="width: 800px; height: 510px;text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div class="winContent">领用单位：<input id="takeUnit" type="text" /></div>
+    <div class="winContent">仪器名称：<input id="name" type="text" />&nbsp;单价：<input id="perPrice" type="text"/></div>
+    <div class="winContent">型号：<input type="text" id="model" />&nbsp;规格：<input id="guige" type="text" /></div>
+    <div class="winContent">厂家：<input id="producer" type="text" /></div>
+    <div class="winContent">购置日期：<input id="buyTime" type="text" class="easyui-datebox" />&nbsp;出厂日期：<input id="chuchangTime" type="text" class="easyui-datebox" /></div>
+    <div class="winContent">发票号：<input id="invoiceNo" type="text" /></div>
+    <div class="winContent">领用人：<input id="taker" type="text" /></div>
+    <div class="winContent">经手人：<input id="passer" type="text" /></div>
+    <a id="save_pic" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="">上传图片</a>
+
+    <div class="winContent"><a id="save_take" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="save()">保存</a></div>
+</div>
+
+<div id="win2" class="easyui-window" title="资产登记" style="width: 800px; height: 510px;text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div class="winContent">领用单位：<input id="takeUnit2" type="text"readonly="readonly" /></div>
+    <div class="winContent">仪器名称：<input id="name2" type="text" readonly="readonly" />&nbsp;单价：<input id="perPrice2" readonly="readonly" type="text" /></div>
+    <div class="winContent">型号：<input type="text" id="model2" readonly="readonly" />&nbsp;规格：<input id="guige2" readonly="readonly" type="text" /></div>
+    <div class="winContent">厂家：<input id="producer2" readonly="readonly" type="text" /></div>
+    <div class="winContent">购置日期：<input id="buyTime2" readonly="readonly" type="text" />&nbsp;出厂日期：<input readonly="readonly" id="chuchangTime2" type="text" /></div>
+    <div class="winContent">发票号：<input id="invoiceNo2" readonly="readonly" type="text" /></div>
+    <div class="winContent">领用人：<input id="taker2" readonly="readonly" type="text" /></div>
+    <div class="winContent">经手人：<input id="passer2" readonly="readonly" type="text" /></div>
+</div>

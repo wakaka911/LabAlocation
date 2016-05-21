@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "labBookApprove";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+
+<script src="~/Asset/js/Lab/labBook.js"></script>
+<div>
+    <table id="lesson_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'labName',width:50">实验室</th>
+                <th data-options="field:'lessonName',width:50">课程名</th>
+                <th data-options="field:'teacherName',width:50">任课教师</th>
+                <th data-options="field:'lessonDay',width:50">上课日期</th>
+                <th data-options="field:'lessonWeekday',width:50">周几</th>
+                <th data-options="field:'lessonArrange',width:50">节次</th>
+                <th data-options="field:'Approve',formatter:Approve">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div id="win" class="easyui-window" title="课程添加" style="width: 600px; height: 400px;text-align:center" data-options="iconCls:'icon-tip',modal:true,closed:true">
+    <div class="winContent">课程名称：<input id="lesson_name" type="text" style="border:none;border-bottom: 1px solid;" /></div>
+    <div class="winContent">课程编号：<input id="lesson_no" type="text" style="border:none;border-bottom: 1px solid;" /></div>
+    <div class="winContent">任课教师工号：<input id="lesson_teacher" type="text" style="border:none;border-bottom: 1px solid;" /></div>
+    <div class="winContent">
+        请选择上课日期：<input id="lessonDay" type="text" class="easyui-datebox" />&nbsp;
+        第
+        <select id="lesson_arrange">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        大节
+    </div>
+    <div class="winContent">选择实验室：<input id="labSelect" class="easyui-combobox" /> </div>
+    <div class="winContent">备注：<textarea id="lesson_remark"></textarea></div>
+    <div class="winContent"><a id="save_lab" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="save()">保存</a></div>
+</div>

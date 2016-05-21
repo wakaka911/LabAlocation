@@ -10,5 +10,7 @@ namespace LA.Domain
     {
         public virtual string account { get; set; }
         public virtual string password { get; set; }
+
+        public virtual int role { get; set; }
     }
 }

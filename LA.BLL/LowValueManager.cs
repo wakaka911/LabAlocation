@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,28 @@ namespace LA.BLL
                 mb.msg = e.Message;
             }
             return mb;
+        }
+
+        public string getSheetNo() {
+            DataTable dt = new DataTable();
+            StringBuilder sql = new StringBuilder();
+            List<QueryField> qf = new List<QueryField>();
+            MsgBox mb = new MsgBox();
+            sql.Append("select right('0000000'+ cast(MAX(sheetNo)+1 as varchar),7) as sheetNo from low_value ");
+            dt = NHHelper.ExecuteDataset(sql.ToString(), qf).Tables[0];
+            string s = dt.Rows[0]["sheetNo"].ToString();
+            if (string.IsNullOrEmpty(s))
+                s = "0000001";
+            return s;
+        }
+
+        public DataTable getExcel() {
+            DataTable dt = new DataTable();
+            StringBuilder sql = new StringBuilder();
+            List<QueryField> qf = new List<QueryField>();
+            sql.Append("select * from low_value ");
+            dt = NHHelper.ExecuteDataset(sql.ToString(), qf).Tables[0];
+            return dt;
         }
     }
 }

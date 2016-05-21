@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "RepairList";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script src="~/Asset/js/Repair/RepairList.js"></script>
+<div>
+    <table id="repair_list" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th data-options="field:'labName',width:50">实验室</th>
+                <th data-options="field:'repairName',width:50">待修设备</th>
+                @*<th data-options="field:'whoPost',width:50">报修人</th>*@
+                <th data-options="field:'isDone',width:50">维修状态</th>
+                <th data-options="field:'Operate',formatter:Operate">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>

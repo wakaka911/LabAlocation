@@ -1,0 +1,125 @@
+﻿#lowValueSheet tr {
+    height: 40px;
+    text-align: center;
+}
+
+
+
+#lowValueSheet input {
+  border:none;
+  border-bottom:1px solid;
+}
+#lowValueSheet {
+width:790px;
+}
+#lowValueSheet #head {
+text-align:center;
+}
+#lowValueSheet h2 {
+font-family:KaiTi;
+margin:0;
+}
+#lowValueSheet h1 {
+margin:0;
+}
+#lowValueSheet hr {
+border:1px solid black;
+width:400px;
+}
+#lowValueSheet #sheetNo {
+    float:left;
+    position:relative;
+    top:18px;
+    left:670px;
+    font-size:30px;
+    color:red;
+}
+#lowValueSheet #body {
+width:777px;
+margin:0 auto;
+}
+#lowValueSheet .center_class {
+text-align:center;
+}
+#sheet .small {
+    width:60px;
+}
+#sheet #noHead {
+    width:80px;
+}
+#sheet #nameHead {
+    width:200px;
+}
+#sheet #modelHead {
+width:200px;
+}
+#sheet #totalPriceHead {
+width:100px;
+}
+#sheet input {
+border:none;
+width:100%;
+}
+
+#lowValueSheet2 tr {
+    height: 40px;
+    text-align: center;
+}
+
+
+
+#lowValueSheet2 input {
+  border:none;
+  border-bottom:1px solid;
+}
+#lowValueShee2t {
+width:790px;
+}
+#lowValueSheet2 #head2 {
+text-align:center;
+}
+#lowValueSheet2 h2 {
+font-family:KaiTi;
+margin:0;
+}
+#lowValueSheet2 h1 {
+margin:0;
+}
+#lowValueSheet2 hr {
+border:1px solid black;
+width:400px;
+}
+#lowValueSheet2 #sheetNo2 {
+    float:left;
+    position:relative;
+    top:18px;
+    left:670px;
+    font-size:30px;
+    color:red;
+}
+#lowValueSheet2 #body2 {
+width:777px;
+margin:0 auto;
+}
+#lowValueSheet2 .center_class {
+text-align:center;
+}
+#sheet2 .small2 {
+    width:60px;
+}
+#sheet2 #noHead2 {
+    width:80px;
+}
+#sheet2 #nameHead2 {
+    width:200px;
+}
+#sheet2 #modelHead2 {
+width:200px;
+}
+#sheet2 #totalPriceHead2 {
+width:100px;
+}
+#sheet2 input {
+border:none;
+width:100%;
+}

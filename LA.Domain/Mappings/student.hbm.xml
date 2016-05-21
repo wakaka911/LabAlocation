@@ -31,6 +31,9 @@
     <property name="studentClass" type="String">
       <column name="studentClass" sql-type="varchar" not-null="false"/>
     </property>
+    <property name="account" type="string">
+      <column name="account" sql-type="varchar" not-null="false"/>
+    </property>
 
 
   </class>

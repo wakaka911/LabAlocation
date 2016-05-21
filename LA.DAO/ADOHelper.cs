@@ -48,6 +48,7 @@ namespace LA.DAO
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = conStr;
             SqlCommand comm = new SqlCommand();
+            comm.Connection = conn;
             comm.CommandText = sql.ToString();
             foreach (KeyValuePair<string, object> kvp in sp)
             {

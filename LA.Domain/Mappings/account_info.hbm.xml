@@ -8,6 +8,9 @@
       <column name="ID" sql-type="varchar" not-null="true"/>
       <generator class="assigned" />
     </id>
+    <property name="role" type="Int32">
+      <column name="role" sql-type="int" not-null="false" />
+    </property>
     <property name="account" type="String">
       <column name="account" sql-type="varchar" not-null="false" />
     </property>

@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "StorageAdd";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addStudent").click(function () {
+            var check = 0;
+            if ($("#testUpdate").get(0).checked) {
+                check = 1;
+            }
+            var params = {
+                goodsName: $("#goodsName").val(),
+                goodsType: $("input[name='goodsType']:checked").val(),
+                goodsNum: $("#goodsNum").val(),
+                goodsText: $("#goodsText").val(),
+                testUpdate: check
+            }
+            alert(check);
+
+            $.DoAjax("/StorageSub/storageAdd", params, function (jsonData) {
+                $("#result").val(jsonData.msg);
+            }, 'post', true);
+        });
+    });
+
+</script>
+
+<h2>StorageAdd</h2>
+<div>
+    <span>物品名称</span><input type="text" id="goodsName" />
+    <br />
+    <span>物品种类</span><input type="radio" name="goodsType" value="1" checked />低值易耗品 <input type="radio" name="goodsType" value="2" />实验室设备 <input type="radio" name="goodsType" value="3" />秘钥
+    <br />
+    <span>数量</span><input type="text" id="goodsNum" />
+    <br />
+    <span>备注</span><input type="text" id="goodsText" />
+    <br />
+    <input type="checkbox" id="testUpdate" />更新备注
+</div>
+
+<div>
+    <input type="button" value="添加物品" id="addStudent" />
+    <input type="button" value="重置" id="reset" />
+</div>
+<div>
+    添加结果:<input type="text" id="result" />
+</div>

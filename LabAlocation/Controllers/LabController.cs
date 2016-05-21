@@ -10,20 +10,21 @@ namespace LabAlocation.Controllers
     {
         //
         // GET: /Lab/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Lab() {
 
             return View();
         }
-
+        [Authorize]
         public ActionResult labBook() {
             return View();
         }
+        [Authorize]
         public ActionResult labBookApprove() {
             return View();
         }

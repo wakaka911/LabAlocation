@@ -1,0 +1,16 @@
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.DAO.dll.config
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.DAO.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.DAO.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.Common.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.Domain.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\NHibernate.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\Newtonsoft.Json.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.Common.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\LA.Domain.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\Newtonsoft.Json.xml
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\obj\Release\LA.DAO.csprojResolveAssemblyReference.cache
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\obj\Release\LA.DAO.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\obj\Release\LA.DAO.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\NPOI.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\graddesign\labAlocation\LabAlocation\LA.DAO\bin\Release\NPOI.xml

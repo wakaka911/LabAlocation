@@ -21,5 +21,7 @@ namespace LA.Domain
         public virtual string studentProfession { get; set; }
 
         public virtual string studentClass { get; set; }
+
+        public virtual string account { get; set; }
     }
 }

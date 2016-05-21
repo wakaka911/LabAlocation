@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Repair";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script src="~/Asset/js/Repair/Repair.js"></script>
+<div>
+    <h2>实验室设备报修</h2>
+    <div class="winContent">实验室名称：<input id="labName" class="easyui-combobox" /></div>
+    <div class="winContent">设备名称（如果是电脑，提供机位号）<input type="text" id="repairName" /></div>
+    <div class="winContent"><a id="save_repair" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="addRepair()">保存</a></div>
+</div>

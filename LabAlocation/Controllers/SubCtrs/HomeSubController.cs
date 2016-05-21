@@ -22,6 +22,30 @@ namespace LabAlocation.Controllers.SubCtrs
 
             return Json(mb);
         }
+        [Authorize]
+        public ActionResult PasswordChange() {
+            string pwd = Request["pwd"] == null ? "" : Request["pwd"].ToString();
+            string account=Session["account"].ToString();
+            MsgBox mb = new MsgBox();
+            if (string.IsNullOrEmpty(pwd))
+            {
+                mb.msg = "密码不能为空。";
+                mb.status = false;
+            }
+            else
+            mb = AccountManager.changePassword(account,pwd);
+            return Json(mb);
+        }
+
+        [Authorize]
+
+        public ActionResult GetMenu()
+        {
+            MsgBox mb = new MsgBox();
+            string account=Session["account"].ToString();
+            mb.obj = AccountManager.getMenu(account);
+            return Json(mb);
+        }
 
     }
 }

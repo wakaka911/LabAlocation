@@ -57,6 +57,7 @@ namespace LabAlocation.Controllers
             if (account != null && password != null && flag)
             {
                 FormsAuthentication.SetAuthCookie(account, false);
+                Session["account"] = account;
                 mb.status = true;
                 mb.msg = "登陆成功。";
             }
@@ -71,6 +72,10 @@ namespace LabAlocation.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("index", "Home");
+        }
+        [Authorize]
+        public ActionResult PasswordChange() {
+            return View();
         }
 
     }

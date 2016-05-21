@@ -1,0 +1,15 @@
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\LA.Domain.dll.config
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\LA.Domain.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\LA.Domain.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NHibernate.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Release\LA.Domain.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Release\LA.Domain.pdb
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\obj\Release\LA.Domain.csprojResolveAssemblyReference.cache
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.OOXML.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.OpenXml4Net.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.OpenXmlFormats.dll
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.xml
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.OOXML.xml
+F:\graddesign\labAlocation\LabAlocation\LA.Domain\bin\Release\NPOI.OpenXml4Net.xml

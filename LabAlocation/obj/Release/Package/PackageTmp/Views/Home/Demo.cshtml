@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Demo";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#DemoBtn").click(function () {
+            var params = { testField: $("#testField").val() };
+            $.DoAjax("/HomeSub/Demo", params, function (jsonData) {
+                $("#result").val(jsonData.msg);
+
+            }, 'post', true);
+
+        });
+    });
+
+</script>
+<div>
+    数据测试数据
+    <input type="text"id="testField" />
+    <input type="button" id="DemoBtn"value="提交到数据库" />
+    数据存储状态
+    <input type="text" id="result" />
+</div>
